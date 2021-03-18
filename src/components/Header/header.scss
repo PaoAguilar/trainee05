@@ -1,0 +1,44 @@
+@import "../../styles/variables";
+
+.header {
+  background-color: transparent;
+  //   background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  font-size: 2rem;
+  color: var(--grey-light-1);
+  nav {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+  }
+  &__logo {
+    background-image: url(../../images/logo.jpg);
+    background-size: cover;
+    border-radius: 3rem;
+    width: 6rem;
+    height: 6rem;
+    margin: 2rem;
+    cursor: pointer;
+  }
+
+  &__link {
+    padding: 4rem;
+    a {
+      text-decoration: none;
+      margin-left: 3rem;
+    }
+    a:link,
+    :visited {
+      color: var(--grey-light-1);
+    }
+    a:hover {
+      font-size: 3rem;
+    }
+  }
+}
