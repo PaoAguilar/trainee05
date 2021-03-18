@@ -7,9 +7,12 @@
   background-image: url(../../images/collage.png);
   background-size: cover;
   background-position: center;
+  color: var(--grey-light-1);
 
   &__wrap-info {
     display: flex;
+    // justify-content: center;
+    align-items: center;
     flex-direction: column;
     min-height: 100vh;
     background-image: linear-gradient(

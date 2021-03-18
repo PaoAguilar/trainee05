@@ -1,8 +1,18 @@
 import React from "react";
-import Layout from "../Layout/Layout";
+import "./home.scss";
 
 const Home = () => {
-  return <Layout />;
+  return (
+    <>
+      <div className="home-logo"></div>
+      <div className="wrap-text">
+        <h1>A new game experience waiting to be discovered</h1>
+      </div>
+      <div className="movies-button">
+        <button>Go to games</button>
+      </div>
+    </>
+  );
 };
 
 export default Home;
