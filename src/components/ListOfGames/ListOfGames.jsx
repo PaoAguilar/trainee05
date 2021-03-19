@@ -1,10 +1,12 @@
-import React from "react";
-import Layout from "../Layout/Layout";
+import React, { useEffect } from "react";
 
 const ListOfGames = () => {
+  useEffect(() => {
+    console.log("Use effect");
+  });
   return (
     <div>
-      <Layout />
+      <h1>HI LIST OF GAMES</h1>
     </div>
   );
 };

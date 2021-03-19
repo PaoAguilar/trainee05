@@ -2,10 +2,10 @@ import "./layout.scss";
 import React from "react";
 import Header from "../Header/Header";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, changePage }) => {
   return (
     <div className="content">
-      <Header />
+      <Header changePage={changePage} />
       <div className="content__wrap-info">{children}</div>
     </div>
   );

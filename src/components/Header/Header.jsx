@@ -1,16 +1,28 @@
 import React from "react";
 import "../Header/header.scss";
-const Header = () => {
+
+const Header = ({ changePage }) => {
   return (
     <header className="header">
-      <div className="header__logo"></div>
+      <div
+        onClick={() => {
+          changePage("Home");
+        }}
+        className="header__logo"
+      ></div>
       <nav>
         <h1>GAME ZONE</h1>
       </nav>
       <div className="header__link">
-        <a href="">ABOUT US</a>
-        <a href="">CONTACT US</a>
-        <a href="">CATEGORIES</a>
+        <button
+          onClick={() => {
+            changePage("ListOfGames");
+          }}
+        >
+          LIST
+        </button>
+        <button>CONTACT US</button>
+        <button>CATEGORIES</button>
       </div>
     </header>
   );

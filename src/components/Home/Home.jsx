@@ -1,7 +1,7 @@
 import React from "react";
 import "./home.scss";
 
-const Home = () => {
+const Home = ({ changePage }) => {
   return (
     <>
       <div className="home-logo"></div>
@@ -9,7 +9,13 @@ const Home = () => {
         <h1>A new game experience waiting to be discovered</h1>
       </div>
       <div className="movies-button">
-        <button>Go to games</button>
+        <button
+          onClick={() => {
+            changePage("ListOfGames");
+          }}
+        >
+          Go to games
+        </button>
       </div>
     </>
   );
