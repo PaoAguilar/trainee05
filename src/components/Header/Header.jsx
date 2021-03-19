@@ -21,8 +21,8 @@ const Header = ({ changePage }) => {
         >
           LIST
         </button>
+        <button>ABOUT US</button>
         <button>CONTACT US</button>
-        <button>CATEGORIES</button>
       </div>
     </header>
   );
