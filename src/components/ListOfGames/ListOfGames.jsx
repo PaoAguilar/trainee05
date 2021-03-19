@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import GameCard from "../GameCard/GameCard";
 import "../ListOfGames/listOfGames.scss";
 
-const ListOfGames = () => {
+const ListOfGames = ({ changePage }) => {
   const [game, setGame] = useState([]);
+  // const [gameDetail, setGameDetail] = useState("ListOfGame");
 
   useEffect(() => {
     console.log("Use effect");
@@ -24,17 +26,7 @@ const ListOfGames = () => {
     <div>
       <h1>LIST OF GAMES</h1>
       <div className="movie">
-        {game.map((item, index) => (
-          <div key={index} className="movie__container">
-            <img alt="movie" src={item.image} />
-            <div className="movie__card-body">
-              <p>{item.title}</p>
-            </div>
-          </div>
-          //   <li key={item.id}>
-          //     {item.title} <img src={item.image} />
-          //   </li>
-        ))}
+        <GameCard changePage={changePage} game={game} />
       </div>
     </div>
   );

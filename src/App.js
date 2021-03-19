@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import GameDetail from "./components/GameDetail/GameDetail";
 import Home from "./components/Home/Home";
 import Layout from "./components/Layout/Layout";
 import ListOfGames from "./components/ListOfGames/ListOfGames";
@@ -11,7 +12,9 @@ function App() {
     if (activePage === "Home") {
       return <Home changePage={setActivePage} />;
     } else if (activePage === "ListOfGames") {
-      return <ListOfGames />;
+      return <ListOfGames changePage={setActivePage} />;
+    } else if (activePage === "GameDetail") {
+      return <GameDetail changePage={setActivePage} />;
     }
   }
   return (
