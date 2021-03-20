@@ -7,14 +7,15 @@ import "./styles/App.scss";
 
 function App() {
   const [activePage, setActivePage] = useState("Home");
+  const [game, setGame] = useState(null);
 
   function renderContent() {
     if (activePage === "Home") {
       return <Home changePage={setActivePage} />;
     } else if (activePage === "ListOfGames") {
-      return <ListOfGames changePage={setActivePage} />;
+      return <ListOfGames changeGame={setGame} changePage={setActivePage} />;
     } else if (activePage === "GameDetail") {
-      return <GameDetail changePage={setActivePage} />;
+      return <GameDetail game={game} changePage={setActivePage} />;
     }
   }
   return (

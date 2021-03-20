@@ -2,21 +2,22 @@ import React, { useState, useEffect } from "react";
 import GameCard from "../GameCard/GameCard";
 import "../ListOfGames/listOfGames.scss";
 
-const ListOfGames = ({ changePage }) => {
-  const [game, setGame] = useState([]);
-  // const [gameDetail, setGameDetail] = useState("ListOfGame");
+const ListOfGames = ({ changePage, changeGame }) => {
+  const [gameList, setGameList] = useState([]);
+  const [page, setPage] = useState();
 
   useEffect(() => {
     console.log("Use effect");
-    getData();
+    getData().then((result) => {
+      setGameList(result);
+    });
   }, []);
 
   const getData = async () => {
     try {
-      const res = await fetch("http://localhost:3000/posts/");
+      const res = await fetch("http://localhost:3000/posts?_page=1");
       const data = await res.json();
-      setGame(data);
-      console.log(data[0].title);
+      return data;
     } catch (error) {
       console.log(error);
     }
@@ -26,7 +27,15 @@ const ListOfGames = ({ changePage }) => {
     <div>
       <h1>LIST OF GAMES</h1>
       <div className="movie">
-        <GameCard changePage={changePage} game={game} />
+        {gameList.map((game) => {
+          return (
+            <GameCard
+              changeGame={changeGame}
+              changePage={changePage}
+              game={game}
+            />
+          );
+        })}
       </div>
     </div>
   );

@@ -1,23 +1,20 @@
 import React from "react";
 
-const GameCard = ({ game, changePage }) => {
+const GameCard = ({ game, changePage, changeGame }) => {
   return (
-    <div>
-      {game.map((item) => (
-        <div
-          onClick={() => {
-            changePage("GameDetail");
-          }}
-          key={item.id}
-          className="movie__container"
-        >
-          <img alt="movie" src={item.image} />
-          <div className="movie__card-body">
-            <p>{item.title}</p>
-            <p>{item.createDate}</p>
-          </div>
-        </div>
-      ))}
+    <div
+      onClick={() => {
+        changeGame(game);
+        changePage("GameDetail");
+      }}
+      key={game.id}
+      className="movie__container"
+    >
+      <img alt="movie" src={game.image} />
+      <div className="movie__card-body">
+        <p>{game.title}</p>
+        <p>{game.createDate}</p>
+      </div>
     </div>
   );
 };
