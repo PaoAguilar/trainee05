@@ -2,6 +2,7 @@
 .movie {
   min-width: 20rem;
   min-height: 30rem;
+  padding-bottom: 3rem;
 
   &__container {
     display: inline-block;
@@ -37,5 +38,27 @@
       font-size: 1rem;
       font-weight: bolder;
     }
+  }
+}
+
+.button-container {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+
+  &__previous,
+  &__next {
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #ffffff;
+    margin: 0 0.3em 0.3em 0;
+    text-decoration: none;
+    color: #ffffff;
+    background: transparent;
+  }
+
+  &__previous:hover,
+  &__next:hover {
+    color: #000000;
+    background-color: #ffffff;
   }
 }

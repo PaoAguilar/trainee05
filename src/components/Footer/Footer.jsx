@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
       </footer>
       <div className="copyright">
-        <p>© Paola Aguilar - React Trainee Program 2021</p>
+        <p>© Applaudo Studios - React Trainee Program 2021</p>
       </div>
     </>
   );
