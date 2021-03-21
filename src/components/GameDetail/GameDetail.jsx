@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../../components/GameDetail/gameDetail.scss";
 
 const GameDetail = ({ game }) => {
+  const [gameComment, setGameComment] = useState([]);
+
+  useEffect(() => {
+    getComments().then((result) => {
+      setGameComment(result);
+    });
+  }, []);
+
+  const getComments = async () => {
+    try {
+      const res = await fetch(
+        `http://localhost:3000/comments/?postId=${game.id}`
+      );
+      const data = await res.json();
+      console.log(data);
+      return data;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div>
-      <h1>GAME DETAIL</h1>
+      <h1>GAME DETAIL {game.id}</h1>
       <div className="game">
         <div className="game__container">
           <h1 className="game__title">{game.title}</h1>
@@ -16,6 +37,13 @@ const GameDetail = ({ game }) => {
           <br />
           <div>
             <h5>{game.body}</h5>
+          </div>
+          <div>
+            <br />
+            <h4>Comments:</h4>
+            {gameComment.map((result) => {
+              return <h5 key={result.id}>{result.comment}</h5>;
+            })}
           </div>
         </div>
       </div>
