@@ -1,0 +1,315 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Dragon Ball Z",
+      "subTitle": "The Dragon Ball video game series are based on the manga and anime series",
+      "image": "https://i.pinimg.com/564x/b4/cf/35/b4cf3522701b58842385954f4d0720e6.jpg",
+      "body": "The series follows the adventures of Goku as he trains in martial arts and explores the world in search of the seven wish-granting orbs known as the Dragon Balls. The games are of various genres, mostly role-playing, platform and fighting games, although the latter have become the most prominent.",
+      "createDate": "2018/06/18",
+      "likes": 12,
+      "author": 3,
+      "tags": [
+        5,
+        6
+      ]
+    },
+    {
+      "title": "Super Mario Bros. 3",
+      "subTitle": "Is a platform game developed and published by Nintendo",
+      "image": "https://i.pinimg.com/564x/20/21/c0/2021c0c7dd4b7970022ca809d407f635.jpg",
+      "author": 1,
+      "body": "Super Mario Bros., the player takes on the role of Mario, the protagonist of the series. Mario's younger brother, Luigi, is controlled by the second player in the game's multiplayer mode and assumes the same plot role and functionality as Mario. The objective is to race through the Mushroom Kingdom, survive the main antagonist Bowser's forces, and save Princess Toadstool.",
+      "createDate": "2013/06/18",
+      "tags": [
+        3,
+        6
+      ],
+      "likes": 3,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "title": "Zelda",
+      "subTitle": "Is a high fantasy action-adventure video game franchise",
+      "image": "https://i.pinimg.com/564x/6b/9f/3c/6b9f3c1961af0d7924351032ddc0184b.jpg",
+      "body": "The series centers on the various incarnations of Link, a courageous young Hylian man, with pointy elf-like ears; and Princess Zelda, a magical princess that is the mortal reincarnation of the goddess Hylia; as they fight to save the magical land of Hyrule from Ganon, an evil warlord turned demon king, who is the principal antagonist of the series.",
+      "createDate": "2018/10/18",
+      "likes": 3,
+      "author": 3,
+      "tags": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 4,
+      "title": "God of war II",
+      "subTitle": "Is an action-adventure game developed by Santa Monica Studio",
+      "image": "https://i.pinimg.com/564x/e4/92/40/e492401984bee0b3436f1adfd4a31b21.jpg",
+      "body": "God of War II is an action-adventure game with hack and slash elements. It's a third-person single-player video game viewed from a fixed camera perspective. The player controls the character Kratos in combo-based combat, platforming, and puzzle game elements, and battles foes who primarily stem from Greek mythology, including harpies, minotaurs, Gorgons, griffins, cyclopes, cerberuses, Sirens, satyrs, and nymphs.",
+      "createDate": "2018/10/17",
+      "likes": 7,
+      "author": 3,
+      "tags": [
+        5
+      ]
+    },
+    {
+      "title": "Minecraft",
+      "subTitle": "Is a sandbox video game developed by Mojang.",
+      "image": "https://i.pinimg.com/564x/4c/73/5a/4c735a845129cb9ff916699c4d6289f2.jpg",
+      "author": 2,
+      "body": "Minecraft is a 3D sandbox game that has no specific goals to accomplish, allowing players a large amount of freedom in choosing how to play the game.[19] However, there is an achievement system,[20] known as 'advancements' in the Java Edition of the game, and 'trophies' on the PlayStation ports.",
+      "createDate": "2011/06/12",
+      "tags": [
+        2
+      ],
+      "likes": 8,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "title": "Super Smash Bros",
+      "subTitle": "Is a 1999 crossover fighting video game developed by HAL Laboratory and published by Nintendo for the Nintendo 64.",
+      "image": "https://i.pinimg.com/564x/7a/58/1d/7a581d4230e44d88fb6d44beba88cc53.jpg",
+      "body": "The Super Smash Bros. series is a departure from the general genre of fighting games; instead of depleting an opponent's life bar, Smash Bros. players seek to knock opposing characters off a stage. Each player has a damage total, represented by a percentage, which rises as the damage is taken and can reach maximum damage of 999%.",
+      "createDate": "2018/10/28",
+      "likes": 7,
+      "author": 3,
+      "tags": [
+        5
+      ]
+    },
+    {
+      "id": 7,
+      "title": "League of legends",
+      "subTitle": "Is a 2009 multiplayer online battle arena video game developed and published by Riot Games.",
+      "image": "https://i.pinimg.com/564x/ab/ff/c6/abffc6ea4465b5451da08832133c1ece.jpg",
+      "body": "League of Legends is a multiplayer online battle arena (MOBA) game, in which the player controls a character ('champion') with a set of unique abilities from an isometric, or top-down, perspective.[4][5] Over the course of a match, champions gain levels by gaining experience points (XP) through killing non-player enemies called minions.",
+      "createDate": "2009/06/20",
+      "likes": 7,
+      "author": 3,
+      "tags": [
+        3,
+        2
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Call of Duty",
+      "subTitle": "Is a first-person shooter video game franchise published by Activision.",
+      "image": "https://i.pinimg.com/564x/04/c2/79/04c279b9557116d8e2d1e7db09cecbc3.jpg",
+      "body": "All of Duty is a first-person shooter video game based on id Tech 3, and was released on October 29, 2003. The game was developed by Infinity Ward and published by Activision. The game simulates the infantry and combined arms warfare of World War II.",
+      "createDate": "2019/09/10",
+      "likes": 7,
+      "author": 3,
+      "tags": [
+        6,
+        3,
+        2
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Metal Gear Solid 2",
+      "subTitle": "Is a stealth game developed by Konami and released for the PlayStation in 1998.",
+      "image": "https://i.pinimg.com/236x/dd/01/ae/dd01aec1bafc9e1352a551038d659a51.jpg",
+      "body": "The player must navigate the protagonist, Solid Snake, through a nuclear weapons facility without being detected by enemies.[17] When Snake moves into an enemy's field of vision, he sets off an 'alert mod' that draws enemies.[18] The player must then hide until 'evasion mode' begins; when the counter reaches zero, the game returns to 'infiltration mode', where enemies are no longer suspicious.",
+      "createDate": "2018/10/03",
+      "likes": 7,
+      "author": 3,
+      "tags": [
+        1,
+        4,
+        6
+      ]
+    },
+    {
+      "title": "Rocket League",
+      "subTitle": "Is a vehicular soccer video game developed and published by Psyonix.",
+      "image": "https://i.pinimg.com/564x/8a/b9/f3/8ab9f33e9a5ea0a74b252b02a25efa66.jpg",
+      "author": 3,
+      "body": "Rocket League's gameplay is largely the same as that of its predecessor, Supersonic Acrobatic Rocket-Powered Battle-Cars. Players control a rocket-powered car and use it to hit a ball that is much larger than the cars towards the other team's goal area to score goals, in a way that resembles a soccer game, with elements reminiscent of a demolition derby. Players' cars have the ability to jump to hit the ball while in mid-air.",
+      "createDate": "2015/01/18",
+      "tags": [
+        1,
+        4
+      ],
+      "likes": 8,
+      "id": 11
+    },
+    {
+      "id": 12,
+      "title": "Pacman",
+      "subTitle": "Is a maze arcade game developed and released by Namco in 1980.",
+      "image": "https://i.pinimg.com/564x/ef/cd/58/efcd58c295c0374a9c37e62e40ebd6a9.jpg",
+      "body": "Pac-Man is a maze chase video game; the player controls the eponymous character through an enclosed maze. The objective of the game is to eat all of the dots placed in the maze while avoiding four colored ghosts — Blinky (red), Pinky (pink), Inky (cyan), and Clyde (orange) — that pursue him. When all of the dots are eaten, the player advances to the next level.",
+      "createDate": "2019/07/12",
+      "likes": 3,
+      "author": 2,
+      "tags": [
+        1,
+        4,
+        6
+      ]
+    },
+    {
+      "title": "Spider Man 2",
+      "subTitle": "Is a 2004 action-adventure video game, based on the film of the same name",
+      "image": "https://i.pinimg.com/564x/65/cb/fd/65cbfda99529a2e1203cd6405af83987.jpg",
+      "author": "1",
+      "createDate": "2021/3/14",
+      "body": "The console version of Spider-Man 2 is a third-person action-adventure video game, set in an open world based on New York City and composed of Manhattan, Roosevelt Island, Ellis Island, and Liberty Island. Players take on the role of Spider-Man and complete missions—linear scenarios with set objectives—to progress through the story.",
+      "tags": [],
+      "likes": 2,
+      "id": 13
+    }
+  ],
+  "tags": [
+    {
+      "id": 1,
+      "name": "Science fiction",
+      "slug": "science-fiction"
+    },
+    {
+      "id": 2,
+      "name": "Comedy",
+      "slug": "comedy"
+    },
+    {
+      "id": 3,
+      "name": "Fantasy",
+      "slug": "fantasy"
+    },
+    {
+      "id": 4,
+      "name": "Terror",
+      "slug": "terror"
+    },
+    {
+      "id": 5,
+      "name": "Historical",
+      "slug": "historical"
+    },
+    {
+      "id": 6,
+      "name": "Action",
+      "slug": "action"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "comment": "Test comment on post #1",
+      "postId": 1,
+      "user": 1
+    },
+    {
+      "id": 2,
+      "comment": "Test comment on post #1",
+      "postId": 1,
+      "user": 2
+    },
+    {
+      "id": 3,
+      "comment": "Test comment on post #2",
+      "postId": 2,
+      "user": 3
+    },
+    {
+      "user": "1",
+      "comment": "Añadiendo un comment",
+      "postId": "12",
+      "id": 4
+    },
+    {
+      "user": "1",
+      "comment": "Adding an example comment",
+      "postId": "11",
+      "id": 6
+    },
+    {
+      "user": "1",
+      "comment": "testing comment for the movie",
+      "postId": "13",
+      "id": 7
+    },
+    {
+      "user": "1",
+      "comment": "Hola",
+      "postId": "13",
+      "id": 8
+    },
+    {
+      "user": "1",
+      "comment": "Otro comment",
+      "postId": "13",
+      "id": 9
+    },
+    {
+      "user": "2",
+      "comment": "adding new comment",
+      "postId": "4",
+      "id": 10
+    },
+    {
+      "id": 11,
+      "comment": "Test comment on post Zelda",
+      "postId": 3,
+      "user": 1
+    },
+    {
+      "id": 12,
+      "comment": "Test comment on post",
+      "postId": 5,
+      "user": 1
+    },
+    {
+      "id": 13,
+      "comment": "Test comment on post 6",
+      "postId":6,
+      "user": 1
+    },
+    {
+      "id": 14,
+      "comment": "Test two comment on post 6",
+      "postId":6,
+      "user": 2
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "John",
+      "lastName": "Wick"
+    },
+    {
+      "id": 2,
+      "name": "Robert",
+      "lastName": "Stromberg"
+    },
+    {
+      "id": 3,
+      "name": "James",
+      "lastName": "Cameron"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Paola",
+      "lastName": "Aguilar"
+    },
+    {
+      "id": 2,
+      "name": "Padme",
+      "lastName": "Amidala"
+    },
+    {
+      "id": 3,
+      "name": "Obi-Wan",
+      "lastName": "Kenobi"
+    }
+  ]
+}

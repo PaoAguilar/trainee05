@@ -4,12 +4,6 @@ import "../../components/GameDetail/gameDetail.scss";
 const GameDetail = ({ game }) => {
   const [gameComment, setGameComment] = useState([]);
 
-  useEffect(() => {
-    getComments().then((result) => {
-      setGameComment(result);
-    });
-  }, []);
-
   const getComments = async () => {
     try {
       const res = await fetch(
@@ -22,10 +16,15 @@ const GameDetail = ({ game }) => {
       console.log(error);
     }
   };
+  useEffect(() => {
+    getComments().then((result) => {
+      setGameComment(result);
+    });
+  }, []);
 
   return (
     <div>
-      <h1>GAME DETAIL {game.id}</h1>
+      <h1>DETAILS OF {game.title} </h1>
       <div className="game">
         <div className="game__container">
           <h1 className="game__title">{game.title}</h1>
