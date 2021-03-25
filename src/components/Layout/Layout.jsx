@@ -1,7 +1,7 @@
-import "./layout.scss";
-import React from "react";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+import './layout.scss';
+import React from 'react';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 const Layout = ({ children, changePage }) => {
   return (

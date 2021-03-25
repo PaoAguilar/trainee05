@@ -1,28 +1,29 @@
-import React from "react";
-import "../Header/header.scss";
+import React from 'react';
+import './header.scss';
 
 const Header = ({ changePage }) => {
   return (
     <header className="header">
       <div
         onClick={() => {
-          changePage("Home");
+          changePage('Home');
         }}
         className="header__logo"
-      ></div>
+      />
       <nav>
         <h1>GAME ZONE</h1>
       </nav>
       <div className="header__link">
         <button
+          type="button"
           onClick={() => {
-            changePage("ListOfGames");
+            changePage('ListOfGames');
           }}
         >
           LIST
         </button>
-        <button>ABOUT US</button>
-        <button>CONTACT US</button>
+        <button type="button">ABOUT US</button>
+        <button type="button">CONTACT US</button>
       </div>
     </header>
   );

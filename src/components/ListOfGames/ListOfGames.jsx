@@ -1,16 +1,10 @@
-import React, { useState, useEffect } from "react";
-import GameCard from "../GameCard/GameCard";
-import "../ListOfGames/listOfGames.scss";
+import React, { useState, useEffect } from 'react';
+import GameCard from '../GameCard/GameCard';
+import './listOfGames.scss';
 
 const ListOfGames = ({ changePage, changeGame }) => {
   const [gameList, setGameList] = useState([]);
   const [page, setPage] = useState(1);
-
-  useEffect(() => {
-    getGames().then((result) => {
-      setGameList(result);
-    });
-  }, [page]);
 
   const getGames = async () => {
     try {
@@ -18,12 +12,22 @@ const ListOfGames = ({ changePage, changeGame }) => {
       const data = await res.json();
       return data;
     } catch (error) {
-      console.log(error);
+      throw new Error(error.message);
     }
   };
+
+  useEffect(() => {
+    getGames().then((result) => {
+      setGameList(result);
+    });
+  }, [page]);
+
   return (
     <div>
-      <h1>LIST OF GAMES (page {page})</h1>
+      <h1>
+        LIST OF GAMES (page
+        {page})
+      </h1>
       <div className="movie">
         {gameList.map((game) => {
           return (
@@ -38,6 +42,7 @@ const ListOfGames = ({ changePage, changeGame }) => {
       </div>
       <div className="button-container">
         <button
+          type="button"
           className="button-container__previous"
           onClick={() => {
             if (page > 1) {
@@ -48,9 +53,10 @@ const ListOfGames = ({ changePage, changeGame }) => {
           Previous
         </button>
         <button
+          type="button"
           className="button-container__next"
           onClick={() => {
-            if ((page >= 1) & (page < 2)) {
+            if (page >= 1 && page < 2) {
               setPage(page + 1);
             }
           }}

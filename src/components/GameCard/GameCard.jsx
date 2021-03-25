@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 
 const GameCard = ({ game, changePage, changeGame }) => {
   return (
     <div
       onClick={() => {
         changeGame(game);
-        changePage("GameDetail");
+        changePage('GameDetail');
       }}
       key={game.id}
       className="movie__container"
