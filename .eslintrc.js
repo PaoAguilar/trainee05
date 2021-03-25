@@ -34,5 +34,6 @@ module.exports = {
     // 'react/prop-types': 0,
     semi: 'error',
     'react/jsx-one-expression-per-line': 'off',
+    'import/prefer-default-export': 'off',
   },
 };

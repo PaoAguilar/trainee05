@@ -52,7 +52,7 @@ const GameDetail = ({ game }) => {
 };
 
 GameDetail.propTypes = {
-  game: PropTypes.array.isRequired,
+  game: PropTypes.object.isRequired,
 };
 
 export default GameDetail;

@@ -1,36 +1,27 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import GameCard from '../GameCard/GameCard';
-
+import { getGamesPagination } from '../../config/actions';
 import './listOfGames.scss';
 
 const ListOfGames = ({ changePage, changeGame }) => {
   const [gameList, setGameList] = useState([]);
-  const [page, setPage] = useState(1);
-
-  const getGames = useCallback(async () => {
-    try {
-      const res = await fetch(
-        `https://trainee-gamerbox.herokuapp.com/games?_start=${page}&_limit=10`
-      );
-      const data = await res.json();
-      return data;
-    } catch (error) {
-      throw new Error(error.message);
-    }
-  });
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
-    getGames().then((result) => {
+    const abortController = new AbortController();
+    getGamesPagination(currentPage).then((result) => {
       setGameList(result);
     });
-  }, [page]);
-
+    return () => {
+      abortController.abort();
+    };
+  }, [currentPage]);
   return (
     <div>
       <h1>
         LIST OF GAMES (page
-        {page})
+        {currentPage})
       </h1>
       <div className="movie">
         {gameList.map((game) => {
@@ -49,8 +40,8 @@ const ListOfGames = ({ changePage, changeGame }) => {
           type="button"
           className="button-container__previous"
           onClick={() => {
-            if (page > 1) {
-              setPage(page - 1);
+            if (currentPage > 1) {
+              setCurrentPage(currentPage - 1);
             }
           }}
         >
@@ -60,8 +51,8 @@ const ListOfGames = ({ changePage, changeGame }) => {
           type="button"
           className="button-container__next"
           onClick={() => {
-            if (page >= 1 && page < 2) {
-              setPage(page + 1);
+            if (currentPage >= 1 && currentPage < 2) {
+              setCurrentPage(currentPage + 1);
             }
           }}
         >
