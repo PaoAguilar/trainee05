@@ -10,10 +10,10 @@ const GameCard = ({ game, changePage, changeGame }) => {
       key={game.id}
       className="movie__container"
     >
-      <img alt="movie" src={game.image} />
+      <img alt="movie" src={game.cover_art.url} />
       <div className="movie__card-body">
-        <p>{game.title}</p>
-        <p>{game.createDate}</p>
+        <p>{game.name}</p>
+        <p>{game.release_year}</p>
       </div>
     </div>
   );

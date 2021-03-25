@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import GameCard from '../GameCard/GameCard';
 import './listOfGames.scss';
 
@@ -6,15 +6,17 @@ const ListOfGames = ({ changePage, changeGame }) => {
   const [gameList, setGameList] = useState([]);
   const [page, setPage] = useState(1);
 
-  const getGames = async () => {
+  const getGames = useCallback(async () => {
     try {
-      const res = await fetch(`http://localhost:3000/posts?_page=${page}`);
+      const res = await fetch(
+        `https://trainee-gamerbox.herokuapp.com/games?_start=${page}&_limit=7`
+      );
       const data = await res.json();
       return data;
     } catch (error) {
       throw new Error(error.message);
     }
-  };
+  });
 
   useEffect(() => {
     getGames().then((result) => {

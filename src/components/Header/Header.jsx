@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import './header.scss';
 
 const Header = ({ changePage }) => {
@@ -29,4 +29,4 @@ const Header = ({ changePage }) => {
   );
 };
 
-export default Header;
+export default memo(Header);

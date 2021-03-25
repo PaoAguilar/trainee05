@@ -20,24 +20,18 @@ const GameDetail = ({ game }) => {
     getComments().then((result) => {
       setGameComment(result);
     });
-  }, [getComments]);
+  }, []);
 
   return (
     <div>
-      <h1>
-        DETAILS OF
-        {game.title}
-      </h1>
+      <h1>DETAILS OF {game.name}</h1>
       <div className="game">
         <div className="game__container">
-          <h1 className="game__title">{game.title}</h1>
-          <h2 className="game__subtitle">{game.subTitle}</h2>
-          <img className="game__image" alt="" src={game.image} />
+          <h1 className="game__title">{game.name}</h1>
+          <h2 className="game__subtitle">{game.genre.name}</h2>
+          <img className="game__image" alt="" src={game.cover_art.url} />
           <div className="game__date">
-            <h5>
-              Date of creation:
-              {game.createDate}
-            </h5>
+            <h5>Year of release: {game.release_year}</h5>
           </div>
           <br />
           <div>
