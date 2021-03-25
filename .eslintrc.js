@@ -35,5 +35,6 @@ module.exports = {
     semi: 'error',
     'react/jsx-one-expression-per-line': 'off',
     'import/prefer-default-export': 'off',
+    'object-curly-newline': 'off',
   },
 };

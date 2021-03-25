@@ -2,7 +2,9 @@
 .movie {
   min-width: 20rem;
   min-height: 30rem;
-  padding-bottom: 3rem;
+  // padding-bottom: 3rem;
+  // padding-top: 3rem;
+  padding: 4rem 12rem 3rem 12rem;
 
   &__container {
     display: inline-block;
@@ -54,6 +56,11 @@
     text-decoration: none;
     color: #ffffff;
     background: transparent;
+    height: 3rem;
+    width: 8rem;
+    margin: 1rem;
+    outline: none;
+    cursor: pointer;
   }
 
   &__previous:hover,
