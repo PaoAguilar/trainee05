@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import './gameDetail.scss';
 
 const GameDetail = ({ game }) => {
@@ -48,6 +49,10 @@ const GameDetail = ({ game }) => {
       </div>
     </div>
   );
+};
+
+GameDetail.propTypes = {
+  game: PropTypes.array.isRequired,
 };
 
 export default GameDetail;

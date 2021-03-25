@@ -31,7 +31,7 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/require-default-props': 'off',
-    'react/prop-types': 0,
+    // 'react/prop-types': 0,
     semi: 'error',
     'react/jsx-one-expression-per-line': 'off',
   },

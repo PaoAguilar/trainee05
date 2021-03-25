@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './home.scss';
 
 const Home = ({ changePage }) => {
@@ -20,6 +21,10 @@ const Home = ({ changePage }) => {
       </div>
     </>
   );
+};
+
+Home.propTypes = {
+  changePage: PropTypes.func.isRequired,
 };
 
 export default Home;

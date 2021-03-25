@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const GameCard = ({ game, changePage, changeGame }) => {
   return (
@@ -17,6 +18,12 @@ const GameCard = ({ game, changePage, changeGame }) => {
       </div>
     </div>
   );
+};
+
+GameCard.propTypes = {
+  game: PropTypes.object.isRequired,
+  changePage: PropTypes.func.isRequired,
+  changeGame: PropTypes.func.isRequired,
 };
 
 export default GameCard;

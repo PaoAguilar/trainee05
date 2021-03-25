@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import PropTypes from 'prop-types';
 import './header.scss';
 
 const Header = ({ changePage }) => {
@@ -27,6 +28,10 @@ const Header = ({ changePage }) => {
       </div>
     </header>
   );
+};
+
+Header.propTypes = {
+  changePage: PropTypes.func.isRequired,
 };
 
 export default memo(Header);

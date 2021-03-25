@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import PropTypes from 'prop-types';
 import GameCard from '../GameCard/GameCard';
+
 import './listOfGames.scss';
 
 const ListOfGames = ({ changePage, changeGame }) => {
@@ -9,7 +11,7 @@ const ListOfGames = ({ changePage, changeGame }) => {
   const getGames = useCallback(async () => {
     try {
       const res = await fetch(
-        `https://trainee-gamerbox.herokuapp.com/games?_start=${page}&_limit=7`
+        `https://trainee-gamerbox.herokuapp.com/games?_start=${page}&_limit=10`
       );
       const data = await res.json();
       return data;
@@ -68,6 +70,11 @@ const ListOfGames = ({ changePage, changeGame }) => {
       </div>
     </div>
   );
+};
+
+ListOfGames.propTypes = {
+  changePage: PropTypes.func.isRequired,
+  changeGame: PropTypes.func.isRequired,
 };
 
 export default ListOfGames;
