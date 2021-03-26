@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import GameDetail from './components/GameDetail/GameDetail';
-import Home from './components/Home/Home';
-import Layout from './components/Layout/Layout';
-import ListOfGames from './components/ListOfGames/ListOfGames';
+import GameDetail from './components/GameDetail';
+import Home from './components/Home';
+import Layout from './components/Layout';
+import ListOfGames from './components/ListOfGames';
 import './styles/App.scss';
 
 function App() {

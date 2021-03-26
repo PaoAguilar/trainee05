@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import './header.scss';
+import '../styles/header.scss';
 
 const Header = ({ changePage }) => {
   return (

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import './gameDetail.scss';
+import '../styles/gameDetail.scss';
 
 const GameDetail = ({ game }) => {
   const [gameComment, setGameComment] = useState([]);

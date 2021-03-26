@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import GameCard from '../GameCard/GameCard';
-import { getGames } from '../../config/actions';
-import './listOfGames.scss';
+import GameCard from './GameCard';
+import { getGames } from '../config/actions';
+import '../styles/listOfGames.scss';
 
 const ListOfGames = ({ changePage, changeGame }) => {
   const [gameList, setGameList] = useState([]);

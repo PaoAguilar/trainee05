@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './home.scss';
+import '../styles/home.scss';
 
 const Home = ({ changePage }) => {
   return (
