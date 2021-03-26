@@ -8,7 +8,7 @@ const GameDetail = ({ game }) => {
   const getComments = useCallback(async () => {
     try {
       const res = await fetch(
-        `https://trainee-gamerbox.herokuapp.com/games/${game.id}/comments`
+        `${process.env.REACT_APP_BASE_URL}/games/${game.id}/comments`
       );
       const data = await res.json();
       // console.log(data);
