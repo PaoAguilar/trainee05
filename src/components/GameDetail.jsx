@@ -21,19 +21,26 @@ const GameDetail = ({ game }) => {
           <h2 className="game__subtitle">{game.genre.name}</h2>
           <img className="game__image" alt="" src={game.cover_art.url} />
           <div className="game__date">
-            <h5>Year of release: {game.release_year}</h5>
+            <h4>Year of release: {game.release_year}</h4>
           </div>
           <div className="game__date">
-            <h5>Genre: {game.genre.name}</h5>
+            <h4>Genre: {game.genre.name}</h4>
           </div>
           <div className="game__date">
-            <h5>Price: {game.price}</h5>
+            <h4>Price: {game.price}</h4>
           </div>
-          <div>
+          <div className="comments">
             <br />
-            <h4>Comments:</h4>
+            <h3>Comments:</h3>
             {gameComment.map((result) => {
-              return <h5 key={result.id}>{result.body}</h5>;
+              return (
+                <div className="comments__all" key={result.id}>
+                  <h4>
+                    <span>Username:</span> {result.user.username}
+                  </h4>
+                  <h4>Comment: {result.body}</h4>
+                </div>
+              );
             })}
           </div>
         </div>

@@ -32,6 +32,9 @@
     width: 12rem;
     height: 18rem;
   }
+  h3 {
+    color: #f19935;
+  }
 }
 
 @media only screen and (max-width: 635px) {
@@ -53,5 +56,18 @@
       color: white;
       margin-bottom: 1rem;
     }
+  }
+}
+
+.comments {
+  text-align: left;
+}
+
+.comments__all {
+  // span:nth-of-type(odd) {
+  //   color: red;
+  // }
+  span {
+    color: rgb(255, 225, 170);
   }
 }
