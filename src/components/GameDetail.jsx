@@ -50,7 +50,7 @@ const GameDetail = ({ game }) => {
 };
 
 GameDetail.propTypes = {
-  game: PropTypes.object.isRequired,
+  game: PropTypes.object,
 };
 
 export default GameDetail;

@@ -10,24 +10,18 @@ function App() {
   const [activePage, setActivePage] = useState('Login');
   const [game, setGame] = useState(null);
 
-  function renderContent() {
-    if (activePage === 'Login') {
-      return <Login changePage={setActivePage} />;
-    }
-    if (activePage === 'Home') {
-      return <Home changePage={setActivePage} />;
-    }
-    if (activePage === 'ListOfGames') {
-      return <ListOfGames changeGame={setGame} changePage={setActivePage} />;
-    }
-    if (activePage === 'GameDetail') {
-      return <GameDetail game={game} changePage={setActivePage} />;
-    }
-    return null;
-  }
+  const renderContent = {
+    Login: <Login changePage={setActivePage} />,
+    Home: <Home changePage={setActivePage} />,
+    ListOfGames: (
+      <ListOfGames changeGame={setGame} changePage={setActivePage} />
+    ),
+    GameDetail: <GameDetail game={game} changePage={setActivePage} />,
+  };
+
   return (
     <div className="App">
-      <Layout changePage={setActivePage}>{renderContent()}</Layout>
+      <Layout changePage={setActivePage}>{renderContent[activePage]}</Layout>
     </div>
   );
 }
