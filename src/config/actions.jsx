@@ -1,9 +1,10 @@
 import { GET_GAMES } from './constants';
 
 export const getGames = async (page) => {
+  const start = page === 1 ? 1 : (page - 1) * 7 + 1;
   try {
     const res = await fetch(
-      `${process.env.REACT_APP_BASE_URL}${GET_GAMES}?_start=${page}&_limit=7`
+      `${process.env.REACT_APP_BASE_URL}${GET_GAMES}?_start=${start}&_limit=7`
     );
     const data = await res.json();
     return data;
@@ -12,6 +13,18 @@ export const getGames = async (page) => {
   }
 };
 
+export const getComments = async (gameId) => {
+  try {
+    const res = await fetch(
+      `${process.env.REACT_APP_BASE_URL}/games/${gameId}/comments`
+    );
+    const data = await res.json();
+    // console.log(data);
+    return data;
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
 export const authLogin = async (username, pass) => {
   try {
     const res = await fetch(`${process.env.REACT_APP_BASE_URL}/auth/local`, {

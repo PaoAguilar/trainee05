@@ -1,25 +1,13 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { getComments } from '../config/actions';
 import '../styles/gameDetail.scss';
 
 const GameDetail = ({ game }) => {
   const [gameComment, setGameComment] = useState([]);
 
-  const getComments = useCallback(async () => {
-    try {
-      const res = await fetch(
-        `${process.env.REACT_APP_BASE_URL}/games/${game.id}/comments`
-      );
-      const data = await res.json();
-      // console.log(data);
-      return data;
-    } catch (error) {
-      throw new Error(error.message);
-    }
-  }, []);
-
   useEffect(() => {
-    getComments().then((result) => {
+    getComments(game.id).then((result) => {
       setGameComment(result);
     });
   }, []);

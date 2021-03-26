@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 import { authLogin } from '../config/actions';
+
 import '../styles/login.scss';
 
 function Login({ changePage }) {
@@ -8,11 +10,10 @@ function Login({ changePage }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(e);
     const identifier = usernameRef.current.value;
     const password = passwordRef.current.value;
-    authLogin(identifier, password).then((data) => {
-      console.log(data);
+    authLogin(identifier, password).then(() => {
+      // console.log(data);
       changePage('Home');
     });
   };
@@ -27,5 +28,9 @@ function Login({ changePage }) {
     </div>
   );
 }
+
+Login.propTypes = {
+  changePage: PropTypes.func.isRequired,
+};
 
 export default Login;

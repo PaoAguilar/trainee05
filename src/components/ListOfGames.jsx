@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import GameCard from './GameCard';
 import { getGames } from '../config/actions';
@@ -8,15 +8,19 @@ const ListOfGames = ({ changePage, changeGame }) => {
   const [gameList, setGameList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
 
-  useEffect(() => {
-    const abortController = new AbortController();
+  const fetchGames = useCallback(() => {
     getGames(currentPage).then((result) => {
       setGameList(result);
     });
+  }, [currentPage]);
+
+  useEffect(() => {
+    const abortController = new AbortController();
+    fetchGames();
     return () => {
       abortController.abort();
     };
-  }, [currentPage]);
+  }, [fetchGames]);
 
   return (
     <div>
@@ -52,7 +56,7 @@ const ListOfGames = ({ changePage, changeGame }) => {
           type="button"
           className="button-container__next"
           onClick={() => {
-            if (currentPage >= 1 && currentPage < 2) {
+            if (currentPage >= 1 && currentPage < 3) {
               setCurrentPage(currentPage + 1);
             }
           }}
