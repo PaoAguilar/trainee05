@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import GameCard from '../GameCard/GameCard';
-import { getGamesPagination } from '../../config/actions';
+import { getGames } from '../../config/actions';
 import './listOfGames.scss';
 
 const ListOfGames = ({ changePage, changeGame }) => {
@@ -10,7 +10,7 @@ const ListOfGames = ({ changePage, changeGame }) => {
 
   useEffect(() => {
     const abortController = new AbortController();
-    getGamesPagination(currentPage).then((result) => {
+    getGames(currentPage).then((result) => {
       setGameList(result);
     });
     return () => {

@@ -8,7 +8,7 @@ const GameDetail = ({ game }) => {
   const getComments = useCallback(async () => {
     try {
       const res = await fetch(
-        `http://localhost:3000/comments/?postId=${game.id}`
+        `https://trainee-gamerbox.herokuapp.com/games/${game.id}/comments`
       );
       const data = await res.json();
       // console.log(data);
@@ -16,7 +16,8 @@ const GameDetail = ({ game }) => {
     } catch (error) {
       throw new Error(error.message);
     }
-  });
+  }, []);
+
   useEffect(() => {
     getComments().then((result) => {
       setGameComment(result);
@@ -34,15 +35,17 @@ const GameDetail = ({ game }) => {
           <div className="game__date">
             <h5>Year of release: {game.release_year}</h5>
           </div>
-          <br />
-          <div>
-            <h5>{game.body}</h5>
+          <div className="game__date">
+            <h5>Genre: {game.genre.name}</h5>
+          </div>
+          <div className="game__date">
+            <h5>Price: {game.price}</h5>
           </div>
           <div>
             <br />
             <h4>Comments:</h4>
             {gameComment.map((result) => {
-              return <h5 key={result.id}>{result.comment}</h5>;
+              return <h5 key={result.id}>{result.body}</h5>;
             })}
           </div>
         </div>

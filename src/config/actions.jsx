@@ -1,6 +1,6 @@
 import { BASE_URL, GET_GAMES } from './constants';
 
-export const getGamesPagination = async (page) => {
+export const getGames = async (page) => {
   try {
     const res = await fetch(`${BASE_URL}${GET_GAMES}?_start=${page}&_limit=7`);
     const data = await res.json();
