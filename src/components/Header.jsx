@@ -7,7 +7,6 @@ const Header = ({ changePage }) => {
   const { jwt } = useAuth();
   return (
     <header className="header">
-      {jwt && <button type="button">Logout</button>}
       <div
         onClick={() => {
           if (jwt) changePage('Home');
@@ -28,6 +27,19 @@ const Header = ({ changePage }) => {
         </button>
         <button type="button">ABOUT US</button>
         <button type="button">CONTACT US</button>
+        {jwt && (
+          <button
+            type="button"
+            className="logout"
+            onClick={() => {
+              localStorage.removeItem('jwt');
+              changePage('Login');
+              window.location.reload();
+            }}
+          >
+            Logout
+          </button>
+        )}
       </div>
     </header>
   );

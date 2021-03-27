@@ -47,6 +47,9 @@
       height: 3rem;
       margin-left: 1rem;
     }
+    button:last-child {
+      background-color: gray;
+    }
     button:hover {
       background-color: #ffe055;
     }
