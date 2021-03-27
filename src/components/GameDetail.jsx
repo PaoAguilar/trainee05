@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import { getComments } from '../config/actions';
+import { getComments, createComment } from '../config/actions';
 import '../styles/gameDetail.scss';
 
 const GameDetail = ({ game }) => {
@@ -11,6 +11,13 @@ const GameDetail = ({ game }) => {
       setGameComment(result);
     });
   }, []);
+
+  const bodyRef = useRef('');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const body = bodyRef.current.value;
+    createComment(game.id, body);
+  };
 
   return (
     <div>
@@ -36,13 +43,34 @@ const GameDetail = ({ game }) => {
               return (
                 <div className="comments__all" key={result.id}>
                   <h4>
-                    <span>Username:</span> {result.user.username}
+                    <span>Name:</span> {result.user.firstName}
+                    {result.user.lastName}
                   </h4>
                   <h4>Comment: {result.body}</h4>
                 </div>
               );
             })}
           </div>
+          <br />
+          <form className="comment-form" onSubmit={handleSubmit}>
+            <div className="input-group">
+              <div className="input-group">
+                <h3>New Comment</h3>
+                <br />
+                <input
+                  id="comment-text"
+                  placeholder="Write the new comment here"
+                  type="text"
+                  className="input"
+                  ref={bodyRef}
+                />
+              </div>
+              <span className="user-advertising" />
+            </div>
+            <button type="submit" className="create-button">
+              Add comment
+            </button>
+          </form>
         </div>
       </div>
     </div>

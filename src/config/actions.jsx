@@ -46,3 +46,29 @@ export const authLogin = async (username, pass) => {
     throw new Error(error.message);
   }
 };
+
+export const createComment = async (gameId, bodyComment) => {
+  const token = localStorage.getItem('jwt');
+  try {
+    const res = await fetch(
+      `${process.env.REACT_APP_BASE_URL}/games/${gameId}/comment`,
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify({
+          body: bodyComment,
+        }),
+      }
+    );
+    if (res.status === 200) {
+      const data = res.json();
+      return data;
+    }
+    return Promise.reject();
+  } catch (error) {
+    throw new Error(error.message);
+  }
+};
