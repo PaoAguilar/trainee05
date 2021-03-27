@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Layout from './components/Layout';
 import ListOfGames from './components/ListOfGames';
 import Login from './components/Login';
+import AuthProvider from './components/context/AuthContext';
 import './styles/App.scss';
 
 function App() {
@@ -21,7 +22,9 @@ function App() {
 
   return (
     <div className="App">
-      <Layout changePage={setActivePage}>{renderContent[activePage]}</Layout>
+      <AuthProvider>
+        <Layout changePage={setActivePage}>{renderContent[activePage]}</Layout>
+      </AuthProvider>
     </div>
   );
 }

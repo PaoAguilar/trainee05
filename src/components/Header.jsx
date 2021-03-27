@@ -1,13 +1,16 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
+import { useAuth } from './context/AuthContext';
 import '../styles/header.scss';
 
 const Header = ({ changePage }) => {
+  const { jwt } = useAuth();
   return (
     <header className="header">
+      {jwt && <button type="button">Logout</button>}
       <div
         onClick={() => {
-          changePage('Home');
+          if (jwt) changePage('Home');
         }}
         className="header__logo"
       />
@@ -18,7 +21,7 @@ const Header = ({ changePage }) => {
         <button
           type="button"
           onClick={() => {
-            changePage('ListOfGames');
+            if (jwt) changePage('ListOfGames');
           }}
         >
           LIST
