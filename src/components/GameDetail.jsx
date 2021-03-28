@@ -1,22 +1,27 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { getComments, createComment } from '../config/actions';
 import '../styles/gameDetail.scss';
 
 const GameDetail = ({ game }) => {
   const [gameComment, setGameComment] = useState([]);
+  const [newComment, setNewComment] = useState('');
 
   useEffect(() => {
     getComments(game.id).then((result) => {
       setGameComment(result);
     });
-  }, []);
+  }, [gameComment]);
 
-  const bodyRef = useRef('');
   const handleSubmit = (e) => {
     e.preventDefault();
-    const body = bodyRef.current.value;
-    createComment(game.id, body);
+    createComment(game.id, newComment).then((result) => {
+      setGameComment([...gameComment, result]);
+    });
+  };
+  const hadleChange = (e) => {
+    e.preventDefault();
+    setNewComment(e.target.value);
   };
 
   return (
@@ -64,7 +69,8 @@ const GameDetail = ({ game }) => {
                   placeholder="Write the new comment here"
                   type="text"
                   className="input"
-                  ref={bodyRef}
+                  value={newComment}
+                  onChange={hadleChange}
                 />
               </div>
               <span className="user-advertising" />
