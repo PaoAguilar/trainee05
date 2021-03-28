@@ -38,18 +38,20 @@ const GameDetail = ({ game }) => {
           </div>
           <div className="comments">
             <br />
-            <h3>Comments:</h3>
-            {gameComment.map((result) => {
-              return (
-                <div className="comments__all" key={result.id}>
-                  <h4>
-                    <span>Name:</span> {result.user.firstName}
-                    {result.user.lastName}
-                  </h4>
-                  <h4>Comment: {result.body}</h4>
-                </div>
-              );
-            })}
+            <div className="game__scroll">
+              <h3>Comments:</h3>
+              {gameComment.map((result) => {
+                return (
+                  <div className="comments__all" key={result.id}>
+                    <h4>
+                      <span>Name:</span> {result.user.firstName}
+                      {result.user.lastName}
+                    </h4>
+                    <h4>Comment: {result.body}</h4>
+                  </div>
+                );
+              })}
+            </div>
           </div>
           <br />
           <form className="comment-form" onSubmit={handleSubmit}>

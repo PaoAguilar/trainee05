@@ -24,7 +24,7 @@ function Login({ changePage }) {
   return (
     <div className="login">
       <form action="" className="login__form" onSubmit={handleSubmit}>
-        <input ref={usernameRef} type="text" placeholder="Username" />
+        <input ref={usernameRef} type="text" placeholder="E-mail" />
         <input ref={passwordRef} type="password" placeholder="Password" />
         <button type="submit">Login</button>
       </form>

@@ -41,6 +41,10 @@ export const authLogin = async (username, pass) => {
       const data = res.json();
       return data;
     }
+    if (res.status === 403) {
+      localStorage.removeItem('jwt');
+      window.location.reload();
+    }
     return Promise.reject();
   } catch (error) {
     throw new Error(error.message);

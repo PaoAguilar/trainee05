@@ -35,6 +35,14 @@
   h3 {
     color: #f19935;
   }
+
+  &__scroll {
+    position: relative;
+    display: inline-block;
+    max-height: 100px;
+    width: 100%;
+    overflow-y: scroll;
+  }
 }
 
 @media only screen and (max-width: 635px) {
